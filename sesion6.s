@@ -1,3 +1,4 @@
+# Programa calculando la media de 4 notas
 .data
 
 nota1: .word 7 # t0
