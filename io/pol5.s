@@ -27,12 +27,11 @@ loop:	lw t3, MTIME_LO(s1)
 	bgeu t3, t6, mA
 	j loop
 	
-	
 
 mR: # manejar Rojo
-	beqz a0, eR # si estaban apagados, enciende
-	j aR # si no, apaga
-vR:	addi t4, t3, 500 #sumar para preparar para siguiente cambio
+	beqz a0, eR      # si estaban apagados, enciende
+	j aR             # si no, apaga
+vR:	addi t4, t3, 500 # sumar para preparar para siguiente cambio
 	j loop
 
 eR: # encender Rojo

@@ -13,7 +13,7 @@
 loop:
 	lw t4, GPLEV(s0)  # cargar valores del puerto GPLEV en t4 (leer estado de leds)
 	and t5, s1, t4    # aplicar mascara de SUMAR (s1) y guardar en t4
-	bnez t5, sumar # el and funciona tal que solo mira si 28 == 1, si no lo es t4 = 0
+	bnez t5, sumar    # el and funciona tal que solo mira si 28 == 1, si no lo es t4 = 0
 	and t5, s2, t4   # aplicar mascara de RESET (s2) y guardar en t4
 	bnez t5, reset   # salta solo si t4 no es 0 (bit 29 == 1)
 	j loop

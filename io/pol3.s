@@ -16,14 +16,14 @@ volver:	sw t0, GPCLR(s0) # apaga leds de 1:os de t0 (apaga)
 
 
 esperar:
-	li t1 500000
+	li t1, 500000
 # bucle que espera (carga valor grande y decrementa 1 por iteración)
 e1loop:	beqz t1, volver
 	addi t1, t1, -1
 	j e1loop
 	
 esperar2:
-	li t1 500000
+	li t1, 500000
 	
 e2loop:	beqz t1, loop
 	addi t1, t1, -1

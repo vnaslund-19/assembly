@@ -139,4 +139,4 @@ rti_end:
 	addi sp, sp, 24       # liberar espacio de pila
 
 	# --- Retornar de la interrupción ---
-	uret                # volver a user_mode         
+	uret                # volver a user_mode
